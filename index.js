@@ -5,6 +5,7 @@ const { Client, MessageMedia } = require('whatsapp-web.js');
 const qrimg = require('qr-image');
 const cors = require('cors');
 const app = express()
+const port = process.env.PORT || 5000
 app.set('view engine', 'ejs');
 
 app.use(cors({
@@ -87,5 +88,5 @@ app.get('/end', (req, res) => {
     res.redirect('/')
 })
 
-app.listen(5000,()=>{ console.log("listening") })
+app.listen(port,()=>{ console.log("listening on"+port) })
 
